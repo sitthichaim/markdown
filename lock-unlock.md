@@ -7,7 +7,6 @@
 > - `IS_CIVIL` พบบุคคลแพ่ง
 > - `IS_FOUND_ASSET` ตรวจพบทรัพย์
 > <p>&nbsp;</p>
-
 ***
 <br />
 <br />
@@ -31,8 +30,6 @@
 >> <br />&emsp;&emsp;`ถ้าปลดล็อคทรัพย์แล้ว ไม่สามารถเริ่มปฏิบัติงาน หรือบันทึกส่งตรวจงานได้ `
 >> <br />&emsp;&emsp;`ต้องเปลี่ยน DO_NOT_ACCOUNTANCY ให้เท่ากับ NULL ก่อน`
 > <p>&nbsp;</p>
-
-
 ***
 <br />
 <br />
@@ -49,8 +46,6 @@
 >
 >> **Column:** `ASSET_RELEASE_DATE` ***วันที่ปลดล็อคสถานะทรัพย์*** 
 > <p>&nbsp;</p>
-
-
 <br />
 
 ## จำหน่าย, บัญชี 
@@ -65,14 +60,11 @@
 >
 >> **Column:** `ASSET_RELEASE_DATE` ***วันที่ปลดล็อคสถานะทรัพย์*** 
 > <p>&nbsp;</p>
-
-
 ***
 <br />
 <br />
 
 # Script
-
 > ## **ปลด Tabs โดยใช้** `PCC_CASE_GEN`
 >```SQL
 >UPDATE PCC_DOSS_CONTROL pdc SET IS_BANKRUPT = NULL
@@ -90,7 +82,6 @@
 >  AND scpm.PCC_CASE_GEN = :pccCaseGen  
 >);
 > ```
-
 ***
 <br />
 
@@ -107,7 +98,6 @@
 >  WHERE spm.CARD_ID = :cardId
 >);
 >```
-
 ***
 <br />
 
@@ -117,7 +107,6 @@
 > SET ASSET_DEBT_FLAG = '2', ASSET_RELEASE_DATE = SYSDATE 
 > WHERE CFC_CAPTION_GEN = :cfcCaptionGen;
 >```
-
 ***
 <br />
 
@@ -127,8 +116,5 @@
 > SET ASSET_DEBT_FLAG = '2', ASSET_RELEASE_DATE = SYSDATE 
 > WHERE CFC_CAPTION_GEN = :cfcCaptionGen;
 >```
-
 ***
 <br />
-
-
